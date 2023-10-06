@@ -33,13 +33,15 @@ import Input from "@/components/UI/Input.vue";
 
 const eventStore = useEventStore()
 
-const name = ref<string>('')
-const address = ref<string>('')
-const comment = ref<string>('')
-
 const props = defineProps({
   name: String
 })
+
+const name = ref<string>(props.name)
+const address = ref<string>('')
+const comment = ref<string>('')
+
+
 
 // Popup
 const popupTriggers = ref({
